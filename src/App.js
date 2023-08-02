@@ -1,25 +1,33 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import CardComponent from './components/ProductsComponent';
+import { BrowserRouter as Router, Route, Routes} from 'react-router-dom';
+import Footer from './components/footer/Footer';
+import AddItem from './AddItem';
+import './App.css'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends React.Component {
+  render() {
+    return (
+      <>
+      <div className="container">
+      <Router>
+         
+        <Routes>
+     
+        
+      
+            <Route exact path="/" element={<CardComponent />} />
+            <Route path="/add-product" element={<AddItem />} />
+          
+      
+      </Routes>
+      </Router>
+      </div>
+      
+      <Footer />
+      </>
+    );
+  }
 }
 
 export default App;
