@@ -99,7 +99,7 @@ class AddItem extends React.Component {
 
   handleSubmit = (event) => {
     event.preventDefault();
-    const { sku, name, price, productType, size, weight, width, length, height, attributeType, attributeValue } = this.state;
+    const { sku, name, price, productType, size, weight, width, length, height } = this.state;
   console.log(this.state);
   this.setState({ submitted: true });
 
@@ -176,7 +176,7 @@ class AddItem extends React.Component {
 
   render() {
     const { productType, submitted } = this.state;
-    const { sku, name, price, size, weight, width, length, height, attributeType, attributeValue } = this.state;
+    const { sku, name, price, size, weight, width, length, height } = this.state;
    
 
     const errors = this.handleValidation();
