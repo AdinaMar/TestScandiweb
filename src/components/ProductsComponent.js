@@ -116,11 +116,11 @@ class ProductComponent extends React.Component {
     return (
       <div>
      <div className= "title">
-        <h1>Products List</h1>
+        <h1>Product List</h1>
         <div className="buttons">
           <Link to="/add-product">
-        <Button text={"Add"}/> </Link>
-        <Button text={"Mass Delete"} id={"delete-product-btn"} onClick={this.handleMassDelete} />
+        <Button text={"ADD"}/> </Link>
+        <Button text={"MASS DELETE"} id={"delete-product-btn"} onClick={this.handleMassDelete} />
         </div>
         </div>
         <hr />
